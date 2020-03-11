@@ -1,0 +1,76 @@
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".MapActivity">-->
+
+<!--    <FrameLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:id="@+id/container"-->
+<!--        >-->
+<!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--            android:id="@+id/bottom_navigation"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:background="@color/colorPrimary"-->
+<!--            app:itemIconTint="@color/white"-->
+<!--            app:itemTextColor="@color/white"-->
+<!--            app:menu="@menu/bottom_nav_menu"-->
+<!--            />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/map_view"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            tools:srcCompat="@tools:sample/backgrounds/scenic[12]" />-->
+
+<!--    </FrameLayout>-->
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container">
+
+    <Button
+        android:id="@+id/enable_zoom"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="disable zoom"/>
+
+        <com.ssau.danilius.diplomablebeacons.CustomMapView
+            android:id="@+id/zoom_iv"
+            android:layout_width="match_parent"
+            android:layout_height="672dp"
+            android:layout_below="@+id/enable_zoom"
+            android:src="@mipmap/flat_map" />
+
+        <com.ssau.danilius.diplomablebeacons.DrawableMapView
+            android:id="@+id/drawble_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/zoom_iv"
+            android:layout_alignBottom="@+id/zoom_iv" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimary"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/bottom_nav_menu" />
+        </FrameLayout>
+
+</RelativeLayout>

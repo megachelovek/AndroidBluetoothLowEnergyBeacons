@@ -8,6 +8,6 @@ Partly used github.com/neXenio/BLE-Indoor-Positioning project.
   - Java
   - SQLite
   - BLE beacons/ IBeacon
-  - Maven
+  - Gradle
 
 **Q2 2020**
